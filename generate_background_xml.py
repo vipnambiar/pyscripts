@@ -104,9 +104,8 @@ def createXmlTree(file_list=None):
         root_elem.append(wp_elem)
     
     tree._setroot(root_elem)
-    fo = open('/home/vipin/Pictures/Precise_Wallpapers/test.xml', "w")
-    tree.write(fo, encoding="UTF-8")
-    fo.close()
+    with open('/home/vipin/Pictures/Precise_Wallpapers/test.xml', "w") as fo:
+        tree.write(fo, encoding="UTF-8")
     
     
 
